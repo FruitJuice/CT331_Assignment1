@@ -94,6 +94,10 @@ void enqueue(listElement** list, char* data, size_t size){
 }
 
 listElement* dequeue(listElement* list){
+    if(list == NULL){
+        return NULL;
+    }
+
     listElement* tail = list;
     listElement* nTail = NULL;
     while (tail->next != NULL){
